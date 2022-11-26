@@ -63,7 +63,7 @@ input[type="checkbox"] {
     aspect-ratio: 2;
     background-color: #FB9F89;
     position: relative;
-    border-radius: 20px;
+    border-radius: 1rem;
     transition: all 0.4s;
 }
 
@@ -141,7 +141,7 @@ form > input[type="number"] {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
 
-    border-radius: 15px;
+    border-radius: 1rem;
     border: none;
 
     font-size: 1rem;
@@ -199,7 +199,7 @@ header {
     padding: 0 15%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 
