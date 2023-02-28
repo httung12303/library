@@ -19,7 +19,7 @@ class Book {
         this.read = read;
         this.index = bookIndex++;
     }
-    info() {
+    get info() {
         return `${this.title}, ${this.author}, ${this.pages} pages, ${this.read === true ? 'read' : 'not read yet'}`;
     }
 };
@@ -28,7 +28,7 @@ addBookForm.addEventListener("submit", addBook);
 addBookButton.addEventListener("click", openForm);
 
 
-function openForm(event) {
+function openForm() {
     formContainer.style.display = "flex";
 }
 
@@ -43,6 +43,8 @@ function addBook(event) {
     const book = new Book(title, author, pages, read);
     books.push(book);
     addBookCard(book);
+
+    console.log(book.info);
 }
 
 function addBookCard(book) {
