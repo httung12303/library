@@ -27,6 +27,24 @@ class Book {
 addBookForm.addEventListener("submit", addBook);
 addBookButton.addEventListener("click", openForm);
 
+titleInput.addEventListener('input', () => {
+    console.log(titleInput.value);
+    if(titleInput.validity.valueMissing) {
+        titleInput.setCustomValidity('You must input a title');
+    } else {
+        titleInput.setCustomValidity("");
+    }
+});
+authorInput.addEventListener('input', () => {
+    console.log(authorInput.value);
+    console.log(authorInput.validity.valueMissing);
+    if(authorInput.validity.valueMissing) {
+        console.log(authorInput.validity.valueMissing);
+        authorInput.setCustomValidity('You must provide an author');
+    } else {
+        authorInput.setCustomValidity("");
+    }
+})
 
 function openForm() {
     formContainer.style.display = "flex";
@@ -94,6 +112,8 @@ function removeBook(e) {
         }
     }
 }
+
+
 
 
 
